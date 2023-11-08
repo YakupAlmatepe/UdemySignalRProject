@@ -14,6 +14,6 @@ namespace SignalR.DtoLayer.ProductDto
 		public decimal Price { get; set; }
 		public string ImageUrl { get; set; }
 		public bool ProductStatus { get; set; }
-        public string CategoryName { get; set; }//bu sınıfta kategori name yii de çekmemiz gerekeceğinden bu propu koyuyoruz
-    }
+		public string CategoryName { get; set; }
+	}
 }
