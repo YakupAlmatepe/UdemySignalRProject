@@ -37,7 +37,7 @@ namespace SignalRApi.Controllers
 			{
 				Description = y.Description,
 				ImageUrl = y.ImageUrl,
-				CategoryName = y.Catregory.CatregoryName,
+				CategoryName = y.Catregory.CategoryName,
 				Price = y.Price,
 				ProductID = y.ProductID,
 				ProductName = y.ProductName,
