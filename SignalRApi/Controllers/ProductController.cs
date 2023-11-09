@@ -72,7 +72,7 @@ namespace SignalRApi.Controllers
             _productService.TDelete(value);
             return Ok("Product Silindi");
         }
-        [HttpGet("GetProduct")]
+        [HttpGet("{id}")]
         public IActionResult GetProduct(int id)
         {
             var value = _productService.TGetById(id);
