@@ -38,7 +38,7 @@ namespace SignalRApi.Controllers
 			});
 			return Ok("Saat  Eklendi");
 		}
-		[HttpDelete]
+		[HttpDelete("{id}")]
 		public IActionResult DeleteOpenHour(int id)
 		{
 			//önce İD yi Getir ardından idye göre sil
@@ -46,7 +46,7 @@ namespace SignalRApi.Controllers
 			_openHourService.TDelete(value);
 			return Ok("Saat Silindi");
 		}
-		[HttpGet("GetOpenHour")]
+		[HttpGet("{id}")]
 		public IActionResult GetOpenHour(int id)
 		{
 			var value = _openHourService.TGetById(id);

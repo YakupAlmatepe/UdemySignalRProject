@@ -41,7 +41,7 @@ namespace SignalRApi.Controllers
 
 			return Ok("Müşteri Yorumu  Eklendi");
 		}
-		[HttpDelete]
+		[HttpDelete("{id}")]
 		public IActionResult DeleteTestimonial(int id)
 		{
 			//önce İD yi Getir ardından idye göre sil
@@ -49,7 +49,7 @@ namespace SignalRApi.Controllers
 			_testimonialService.TDelete(value);
 			return Ok("Müşteri Yorumu Silindi");
 		}
-		[HttpGet("GetTestimonial")]
+		[HttpGet("{id}")]
 		public IActionResult GetTestimonial(int id)
 		{
 			var value = _testimonialService.TGetById(id);

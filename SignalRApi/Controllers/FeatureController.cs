@@ -42,7 +42,7 @@ namespace SignalRApi.Controllers
 			});
 			return Ok("İndirim Blgisi Eklendi");
 		}
-		[HttpDelete]
+		[HttpDelete("{id}")]
 		public IActionResult DeleteFeature(int id)
 		{
 			//önce İD yi Getir ardından idye göre sil
@@ -50,7 +50,7 @@ namespace SignalRApi.Controllers
 			_featureService.TDelete(value);
 			return Ok("Öne Çıkan Alanı Silindi");
 		}
-		[HttpGet("GetFeature")]
+		[HttpGet("{id}")]
 		public IActionResult GetFeature(int id)
 		{
 			var value = _featureService.TGetById(id);
