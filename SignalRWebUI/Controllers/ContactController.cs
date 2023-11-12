@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using SignalRWebUI.ContactDtos;
+
+using SignalRWebUI.Dtos.ContactDtos;
 using System.Text;
 
 namespace SignalRWebUI.Controllers
