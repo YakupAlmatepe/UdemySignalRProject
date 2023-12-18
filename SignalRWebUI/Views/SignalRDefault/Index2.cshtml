@@ -15,9 +15,6 @@
 <script src="~/js/site.js" asp-append-version="true"></script>
 
 
-
-
-
 <div class="content">
     <div class="container-fluid">
         <div class="row">
@@ -25,42 +22,28 @@
                 <div class="card">
 
                     <script type="text/javascript">
-
-                        // $(document).ready(() => {
-
-                        //     var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7097/SignalRHub").build();
-                        //     $("#connstatus").text(connection.state);
-                        //     connection.start().then(() => {
-                        //         $("#connstatus").text(connection.state);
-                        //         setInterval(() => {
-                        //             connection.invoke("SendCategoryCount");
-                        //         }, 1000);
-
-                        //     }).catch((err) => { console.log(err) });
-
-                        //     connection.on("ReceiveCategoryCount", (value) => {
-                        //         $("#categorycount").text(value);
-                        //     });
-
-                        // });
                         $(document).ready(() => {
-                            var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7097/SignalRHub").build();
+                            var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7029/SignalRHub").build();
+                            $("#connstatus").text(connection.state);
+
+
                             connection.start().then(() => {
-                                console.log("Bağlantı kuruldu:", connection.state);
+                                $("#connstatus").text(connection.state);
                                 setInterval(() => {
-                                    connection.invoke("SendCategoryCount").catch(err => console.error("SendCategoryCount hatası:", err));
+                                    connection.invoke("SendCategoryCount");
                                 }, 1000);
+
                             }).catch((err) => {
-                                console.error("Bağlantı başlatma hatası:", err);
+                                console.log(err)
                             });
+
+
 
                             connection.on("ReceiveCategoryCount", (value) => {
-                                console.log("Kategori sayısı alındı:", value);
                                 $("#categorycount").text(value);
-                            });
+                            })
+
                         });
-
-
                     </script>
 
                 </div>
@@ -68,10 +51,9 @@
         </div>
     </div>
 </div>
-
 <div class="row">
     <div class="col-md-8 offset-2">
-        <div class="alert alert-success">Bağlantının Durumu:<strong id="connstatus"></strong></div>
-        <div class="alert alert-info">Kategori Sayısı:<strong id="categorycount"></strong></div>
+        <div class="alert alert-success"> Bağlantıların durumu : <strong id="connstatus"></strong></div>
+        <div class="alert alert-info"> Kategori Sayısı durumu : <strong id="categorycount"></strong></div>
     </div>
 </div>
