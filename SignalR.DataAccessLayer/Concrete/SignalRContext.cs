@@ -25,5 +25,6 @@ namespace SignalR.DataAccessLayer.Concrete
 		public DbSet<SocialMedia> SocialMedias { get; set; }
 		public DbSet<Testimonial> Testimonials { get; set; }
 		public DbSet<OpenHour> OpenHours { get; set; }
+		public DbSet<Slider> Sliders { get; set; }
 	}
 }
