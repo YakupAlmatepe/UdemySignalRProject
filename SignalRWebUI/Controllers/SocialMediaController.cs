@@ -57,7 +57,7 @@ namespace SignalRWebUI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync($"https://localhost:7097/api/SocialMedia/{id}");
-            if (responseMessage.IsSuccessStatusCode)
+			if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<UpdateSocialMediaDto>(jsonData);

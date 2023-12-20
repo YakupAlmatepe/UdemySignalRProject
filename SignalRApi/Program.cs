@@ -59,6 +59,10 @@ builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
 //Add Slider
 builder.Services.AddScoped<ISliderService, SliderManager>();
 builder.Services.AddScoped<ISliderDal, EfSliderDal>();
+//Add Message
+
+builder.Services.AddScoped<IMessageService, MessageManager>();
+builder.Services.AddScoped<IMessageDal, EfMessageDal>();
 
 
 builder.Services.AddControllers();
