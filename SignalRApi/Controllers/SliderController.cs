@@ -36,7 +36,8 @@ namespace SignalRApi.Controllers
                 Description3 = createSliderDto.Description3,
                 Title1 = createSliderDto.Title1,
                 Title2 = createSliderDto.Title2,
-                Title3 = createSliderDto.Title3
+                Title3 = createSliderDto.Title3,
+                Url=createSliderDto.Url
             });
             return Ok("Öne Çıkan Bilgisi Eklendi");
         }

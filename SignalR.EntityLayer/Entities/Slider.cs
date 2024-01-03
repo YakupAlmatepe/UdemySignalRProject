@@ -15,5 +15,6 @@ namespace SignalR.EntityLayer.Entities
         public string Description1 { get; set; }
         public string Description2 { get; set; }
         public string Description3 { get; set; }
+        public string Url { get; set; }
     }
 }

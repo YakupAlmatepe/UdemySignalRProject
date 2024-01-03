@@ -13,7 +13,21 @@ namespace SignalRWebUI.Controllers
 		{
 			_httpClientFactory = httpClientFactory;
 		}
+		//public async Task<IActionResult> Index()
+		//{
+		//	var client = _httpClientFactory.CreateClient();
+		//	var responseMessage = await client.GetAsync("https://localhost:7097/api/About");
+		//	if (responseMessage.IsSuccessStatusCode)
+		//	{
+		//		var jsonData = await responseMessage.Content.ReadAsStringAsync();
+		//		var values = JsonConvert.DeserializeObject<List<ResultAboutDto>>(jsonData);
 
+		//		100 kelimeye kadar olan kısmı göster
+		//	   var shortAbout = values.FirstOrDefault(x => x.WordCount <= 100);
+		//		return View(shortAbout);
+		//	}
+		//	return View();
+		//}
 		public async Task<IActionResult> Index()
 		{
 			var client = _httpClientFactory.CreateClient();
