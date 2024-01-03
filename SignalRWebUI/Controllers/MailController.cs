@@ -18,7 +18,7 @@ namespace SignalRWebUI.Controllers
 		{
 			MimeMessage mimeMessage = new MimeMessage();
 
-			MailboxAddress mailboxAddressFrom = new MailboxAddress("Volumetrix Web", "volumetrixtrader@gmail.com");
+			MailboxAddress mailboxAddressFrom = new MailboxAddress("Volumatrix Web", "volumatrixtrader@gmail.com");
 			mimeMessage.From.Add(mailboxAddressFrom);
 
 			MailboxAddress mailboxAddressTo = new MailboxAddress("User", createMailDto.ReceiverMail);
@@ -32,7 +32,7 @@ namespace SignalRWebUI.Controllers
 
 			SmtpClient client = new SmtpClient();
 			client.Connect("smtp.gmail.com", 587, false);
-			client.Authenticate("volumetrixtrader@gmail.com", "yjbz eqfr nsbi mqwc");
+			client.Authenticate("volumatrixtrader@gmail.com", "yjbz eqfr nsbi mqwc");
 
 			client.Send(mimeMessage);
 			client.Disconnect(true);
