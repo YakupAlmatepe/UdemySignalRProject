@@ -65,7 +65,8 @@ namespace SignalRApi.Controllers
                 Title1 = updateSliderDto.Title1,
                 Title2 = updateSliderDto.Title2,
                 Title3 = updateSliderDto.Title3,
-                SliderID = updateSliderDto.SliderID
+                SliderID = updateSliderDto.SliderID,
+                Url=updateSliderDto.Url
             });
             return Ok("Öne Çıkan Alan Bilgisi Güncellendi");
         }

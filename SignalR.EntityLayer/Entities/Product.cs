@@ -15,6 +15,7 @@ namespace SignalR.EntityLayer.Entities
 		public string Description { get; set; }
 		public decimal Price { get; set; }
 		public string ImageUrl { get; set; }
+		public string VideoUrl { get; set; }
 		public bool ProductStatus { get; set; }
 		public int CatregoryID { get; set; }
 		public Category Catregory { get; set; }

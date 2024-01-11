@@ -1,4 +1,5 @@
 ﻿@model List<ResultSliderDto>
+@* //slider sayfası *@
 @foreach (var item in Model)
 {
 
@@ -19,7 +20,7 @@
                                 </p>
                                 
                                 <div class="btn-box">
-                                    <a href="/Login/Index" class="btn1">
+                                        <a href="@item.Url" class="btn1">
                                         Videoyu İzle
                                     </a>
                                 </div>
@@ -41,7 +42,7 @@
                                     @item.Description2
                                 </p>
                                 <div class="btn-box">
-                                    <a href="/Login/Index" class="btn1">
+                                        <a href="@item.Url" class="btn1">
                                             Videoyu İzle
                                     </a>
                                 </div>
@@ -62,7 +63,7 @@
                                 <p>@item.Description3
                                 </p>
                                 <div class="btn-box">
-                                    <a href="/Login/Index" class="btn1">
+                                    <a href="@item.Url" class="btn1">
                                             Videoyu İzle
                                     </a>
                                 </div>

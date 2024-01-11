@@ -23,7 +23,7 @@ namespace SignalRWebUI.Controllers
 				var values = JsonConvert.DeserializeObject<List<ResultContactDto>>(jsonData);
 				return View(values);
 			}
-			return View();
+			return View("Contact/Index");
 		}
 		[HttpGet]
 		public IActionResult CreateContact()

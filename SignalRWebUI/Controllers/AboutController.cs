@@ -46,7 +46,7 @@ namespace SignalRWebUI.Controllers
 			return View();
 		}
 		[HttpPost]
-		public async Task<IActionResult> CreateCategory(CreateAboutDto createAboutDto)
+		public async Task<IActionResult> CreateAbout(CreateAboutDto createAboutDto)
 		{
 			
 			var client = _httpClientFactory.CreateClient();

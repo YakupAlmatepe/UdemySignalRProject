@@ -37,7 +37,7 @@ namespace SignalRWebUI.Controllers
 			client.Send(mimeMessage);
 			client.Disconnect(true);
 
-			return RedirectToAction("Index", "Default");
+			return RedirectToAction("Index", "Mail");
 		}
 	}
 }

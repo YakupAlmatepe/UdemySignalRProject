@@ -6,7 +6,7 @@
 
 <div class="content">
     <div class="container-fluid">
-        <h4 class="page-title">Ürün İşlemleri</h4>
+        <h4 class="page-title">Eğitim İşlemleri</h4>
         <div class="row">
             <div class="col-md-12">
                 <form method="post">
@@ -17,16 +17,16 @@
                         <input type="hidden" asp-for="ProductID" />
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="productname">Ürün Adını Giriniz</label>
+                                <label for="productname">Eğitim Adını Giriniz</label>
                                 <input type="text" class="form-control" asp-for="ProductName" id="productname">
                             </div>
                         </div>
-                        <div class="card-body">
+                       @*  <div class="card-body">
                             <div class="form-group">
                                 <label for="price">Ürün Fiyatını Giriniz</label>
                                 <input type="text" class="form-control" asp-for="Price" id="price">
                             </div>
-                        </div>
+                        </div> *@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="imageurl">Ürün Görselini Giriniz</label>
@@ -35,18 +35,24 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="price">Ürün Kategorisini Seçiniz</label>
+                                <label for="videourl">Ürün Video Uzantısı Giriniz</label>
+                                <input type="text" class="form-control" asp-for="VideoUrl" id="videourl">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="price">Eğitim Kategorisini Seçiniz</label>
                                 @Html.DropDownListFor(x=>x.CategoryID,(List<SelectListItem>)ViewBag.v,new {@class="form-control"})
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="description">Ürün Açıklamasını Giriniz</label>
+                                <label for="description">Eğitim Açıklamasını Giriniz</label>
                                 <input type="text" class="form-control" asp-for="Description" id="description">
                             </div>
                         </div>
                         <div class="card-action">
-                            <button class="btn btn-primary">Ürünü Güncelle</button>
+                            <button class="btn btn-primary">Eğitimi Güncelle</button>
                         </div>
                     </div>
                 </form>
