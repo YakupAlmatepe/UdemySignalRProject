@@ -4,9 +4,14 @@
 }
 @* // //UISocialmedia *@
 @await Component.InvokeAsync("_UILayoutHeadComponentPartial")
-<body class="sub_page">@* 
-@await Component.InvokeAsync("_UILayoutSocialMediaComponentPartial") *@
+
+<body class="sub_page">
+@* @await Component.InvokeAsync("_UILayoutSocialMediaComponentPartial")  *@
     @await Component.InvokeAsync("_MenuNavbarComponentPartial")
+
+
+    
+    
 <div class="footer_social">
 
     @foreach (var item in Model)

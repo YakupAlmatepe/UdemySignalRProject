@@ -31,7 +31,7 @@ namespace SignalRWebUI.Controllers
 			var responseMessage = await client.PostAsync("https://localhost:7097/api/Message", stringContent);
 			if (responseMessage.IsSuccessStatusCode)
 			{
-				return RedirectToAction("Default/Index");
+				return RedirectToAction("Index");
 			}
 			return View();
 		}

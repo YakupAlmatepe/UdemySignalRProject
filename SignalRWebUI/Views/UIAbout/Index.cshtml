@@ -1,0 +1,108 @@
+﻿@model List<ResultAboutDto>
+@{
+
+    Layout = null;
+}
+
+@* Anasayfa Hakkımızda alanı *@
+
+<link href="~/feane-1.0.0/css/bootstrap.css" rel="stylesheet" />
+<link href="~/feane-1.0.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="~/feane-1.0.0/css/responsive.css" rel="stylesheet" />
+@* <a href="~/feane-1.0.0/css/style.css.map">~/feane-1.0.0/css/style.css.map</a> *@
+<link href="~/feane-1.0.0/css/style.css" rel="stylesheet" />
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>VolumatriX</title>
+    <!-- Ek başlık ve diğer head içeriği buraya eklenebilir -->
+</head>
+
+@await Component.InvokeAsync("_UILayoutHeadComponentPartial")
+
+<body class="sub_page">
+    @await Component.InvokeAsync("_UILayoutNavbarComponentPartial")
+
+
+    <!-- about section -->
+    @*  @await Component.InvokeAsync("_DefaultAboutComponentPartial") *@
+
+
+    <section class="about_section layout_padding">
+        <div class="container  ">
+
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="img-box">
+                        <img src="~/feane-1.0.0/images/about1.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>
+                                Öğretilerimiz
+                            </h2>
+                        </div>
+                        <p>
+                            Hacim profili
+                            Hacim profili en güçlü hacim göstergelerinden biridir çünkü fiyatın en çok ilgi duyulan bölgesini ve delta profili sayesinde bunların nasıl yürütüldüğünü vurgular.
+
+                            Profili okuyabilmek, hacimle başarılı bir piyasa analizi için en önemli anahtarlardan biridir ve aynı zamanda o kadar da kolay değildir, çünkü bir profil gördüğümüzde dağıtımın şeklini, dengesiz bölgeleri de tanımlamanız gerekir. , sözde kontrol noktası (POC) ve diğer birçok şey.
+                        </p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about_section layout_padding">
+        <div class="container  ">
+
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="img-box">
+                        <img src="~/feane-1.0.0/images/about2.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>
+                                Araçlarımız
+                            </h2>
+                        </div>
+                        <p>
+                            Grafik dom
+                            Scalper yatırımcılarına yardımcı olmak için Chart Dom adında bir araç düşündük. bu da yatırımcıların çok hızlı bir şekilde emir eklemesine olanak tanıyor; bu sadece bir emir gönderimi değildir, aynı zamanda çekme ve yığın emrini ve yürütülen emri de analiz eder.
+
+                            Chart Dom, yatırımcıların tek tıklamayla limit emri (sol fare tıklaması) ve piyasa emri (sağ fare tıklaması) vermelerine olanak tanır.
+
+                            Volumatrix aynı zamanda Oco Emir Stratejisini de destekler; bu şekilde pozisyonunuzu küçük parçalara ayırabilir, birden fazla stop ve hedef emri verebilirsiniz.
+                        </p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- end about section -->
+    <!-- footer section -->
+    @await Component.InvokeAsync("_UILayoutFooterComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutScriptComponentPartial")
+
+</body>
+
+</html>
